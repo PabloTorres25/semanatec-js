@@ -18,7 +18,7 @@ const sequelize = new Sequelize('semanatec', 'admin', 'password', {
 const modelDefiners = [
     require('../models/persona'),
     require('../models/proyecto'),
-    require('../models/proyectopersona')
+    require('../models/proyectoPersona')
 ]
 
 // Vincular el modelo con el objeto de conexión

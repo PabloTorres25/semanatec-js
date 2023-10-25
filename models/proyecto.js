@@ -1,7 +1,7 @@
 const Sequelize=require('sequelize');
 
 const Proyecto = (sequelize)=>{
-    sequelize.define('proyeto',{
+    sequelize.define('proyecto',{
         idPersona:{
             type:Sequelize.INTEGER,
             autoIncrement: true,
