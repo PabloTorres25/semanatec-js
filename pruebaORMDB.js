@@ -7,9 +7,9 @@ const sequelize = new Sequelize('semanatec', 'admin', 'password', {
     host:'database-1.ck9ajljbobd5.us-east-1.rds.amazonaws.com',
     define:{
         // Evitar que nos ponga createAt y updateAt
-        timestamps: true,
+        timestamps: false,
         // Pluralizar
-        freezeTableName: false   
+        freezeTableName: true   
     }
 });
 
