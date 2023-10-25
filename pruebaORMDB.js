@@ -5,7 +5,9 @@ const Sequelize=require('sequelize');
 const sequelize = new Sequelize('semanatec', 'admin', 'password', {
     dialect:'mysql',
     define:{
-        //Evitar que nos ponga createAt y updateAt
+        // Evitar que nos ponga createAt y updateAt
+        timestamps: false,
+        // Pluralizar
         
     }
 })
