@@ -30,7 +30,7 @@ const Ejemplo = sequelize.define('ejemplo',{
 // Prueba de conexión
 sequelize.sync()
 .then(result =>{        //1
-    console.log(result);
+    console.log("Conexión exitosa");
 })
 .catch(error=>console.log(error));
 
