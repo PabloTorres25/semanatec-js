@@ -10,7 +10,7 @@ app.get('/test', (request, response)=>{         //3
     response.send('<h1>Servidos Funcionando</h1>')
 })
 
-// Levantar el server
+// Levantar el server y escuchar peticiones
 app.listen(8080, ()=>{          //2
     console.log("Servidor escuchando")
 })    
