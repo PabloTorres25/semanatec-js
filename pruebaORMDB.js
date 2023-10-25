@@ -4,11 +4,25 @@ const Sequelize=require('sequelize');
 // mysql -u admin -h -P 3306 -p
 const sequelize = new Sequelize('semanatec', 'admin', 'password', {
     dialect:'mysql',
-    host:'',
+    host:'database-1.ck9ajljbobd5.us-east-1.rds.amazonaws.com',
     define:{
         // Evitar que nos ponga createAt y updateAt
         timestamps: false,
         // Pluralizar
         freezeTableName:true   
     }
+});
+
+// Prueba de conexión
+sequelize.sync()
+.then(result =>{        //1
+    console.log(result);
 })
+.catch(error=>console.log(error));
+
+/**
+ * En Node, el codigo se ejecuta dependiendo del hilo de codigo de Node, es decir, no se ejecuta en el orden en 
+ * el que esta escrito.
+ * 1.   JavaScript, hace promesas de que el codigo se va a ejecutar, pero no te dice cuando, por eso utilizamos
+ *      el "then"
+ */
