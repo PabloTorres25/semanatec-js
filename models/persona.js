@@ -11,4 +11,5 @@ const Persona = (sequelize)=>{
         nombre:Sequelize.STRING
     })
 };
+// Para llamar la tabla Persona desde otro archivo 
 module.exports = Persona;
