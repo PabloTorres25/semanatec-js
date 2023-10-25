@@ -15,8 +15,17 @@ const sequelize = new Sequelize('semanatec', 'admin', 'password', {
 
 // Creamos una Tabla llamada ejemplo
 const Ejemplo = sequelize.define('ejemplo',{
-
-})
+    idTrabajo:{
+        type:Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+        allowNull: false
+    },
+    descripcion:{
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+});
 
 // Prueba de conexión
 sequelize.sync()
