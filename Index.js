@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 //middleware        //1
-app.use(expressjson());
+app.use(express.json());
 
 // Mala practica
 app.get('/test', (request, response)=>{         //3
