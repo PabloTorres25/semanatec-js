@@ -25,3 +25,10 @@ const modelDefiners = [
 for(const modelDefiner of modelDefiners){
     modelDefiner(sequelize)
 }
+
+// Contruir las relaciones
+applyRelations(sequelize);
+
+// Exportar el elemento de conexión
+module.exports = sequelize;
+ 
