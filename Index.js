@@ -7,7 +7,7 @@ app.use(express.json());
 // Mala practica
 app.get('/test', (request, response)=>{         //3
     console.log("Esto no se debe de hacer pero funciona")
-    response.send('<h1>Servidos Funcionando</h1>')
+    response.send('<h1>Servidor Funcionando</h1>')
 })
 
 // Levantar el server y escuchar peticiones
