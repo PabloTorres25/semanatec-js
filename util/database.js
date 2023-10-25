@@ -12,3 +12,15 @@ const sequelize = new Sequelize('semanatec', 'admin', 'password', {
         freezeTableName: true   
     }
 });
+
+// Cargar modelos
+const modelDefiners = [
+    require('../models/persona'),
+    require('../models/proyecto'),
+    require('../models/proyectopersona')
+]
+
+// Vincular el modelo con el objeto de conexión
+for(const modelDefiner of modelDefiners){
+    modelDefiner(sequelize)
+}
