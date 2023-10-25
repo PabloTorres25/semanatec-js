@@ -13,6 +13,11 @@ const sequelize = new Sequelize('semanatec', 'admin', 'password', {
     }
 });
 
+// Creamos una Tabla llamada ejemplo
+const Ejemplo = sequelize.define('ejemplo',{
+
+})
+
 // Prueba de conexión
 sequelize.sync()
 .then(result =>{        //1
