@@ -5,10 +5,10 @@ function applyRelations(sequelize){
     const ProyectoPersona = sequelize.models.proyectopersona;
 
 // Un proyecto pueden estar muchas personas
-Proyecto.belongsToMany(Persona);
+Proyecto.belongsToMany(Persona,{through: ProyectoPersona});
 
 // Una persona puede participar en muchos proyectos
-Persona.belongsToMany(Proyecto);
+Persona.belongsToMany(Proyecto, {through: ProyectoPersona});
 
 }
 
