@@ -3,5 +3,9 @@ const Sequelize=require('sequelize');
 // Configurar la conexión
 // mysql -u admin -h -P 3306 -p
 const sequelize = new Sequelize('semanatec', 'admin', 'password', {
-    
+    dialect:'mysql',
+    define:{
+        //Evitar que nos ponga createAt y updateAt
+        
+    }
 })
