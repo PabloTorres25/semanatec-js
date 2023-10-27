@@ -7,7 +7,7 @@ const sequelize = require('./util/database')
 
 //middleware                                                    //1
 app.use(express.json());
-app.use('')
+app.use('/persona', personaRoutes);
 
 // Mala practica
 app.get('/test', (request, response)=>{                         //3
