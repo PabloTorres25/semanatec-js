@@ -14,3 +14,7 @@ exports.postAgregarPersona=(req, res)=>{
         res.send('Hubo un problema')
     })
 }
+exports.getConsultaPersonas =(req,res)=>{
+    const result = Persona.findAll();
+    
+}
