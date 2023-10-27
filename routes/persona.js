@@ -5,5 +5,6 @@ const personaController = require("../controllers/persona");    // Lo que hicimo
 
 // Rutas de mi controller
 router.post('/agregarPersona', personaController.postAgregarPersona);
+router.post('/consoltarPersonas', personaController.getConsultaPersonas);
 
 module.exports = router
