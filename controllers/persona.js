@@ -15,6 +15,6 @@ exports.postAgregarPersona=(req, res)=>{
     })
 }
 exports.getConsultaPersonas =(req,res)=>{
-    const result = Persona.findAll();
+    const result = await Persona.findAll();
     
 }
