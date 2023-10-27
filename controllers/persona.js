@@ -11,6 +11,6 @@ exports.postAgregarPersona=(req, res)=>{
     })
     .catch(error=>{
         console.log(error);
-        res.send('Hubo un error')
+        res.send('Hubo un problema')
     })
 }
