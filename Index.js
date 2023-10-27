@@ -1,11 +1,13 @@
 // Importar bibliotecas
 const express = require("express");
 const app = express();
+const personaRoutes = require('./routes/persona')               //4
 // Trae el objeto de conexión
 const sequelize = require('./util/database')
 
 //middleware                                                    //1
 app.use(express.json());
+app.use('')
 
 // Mala practica
 app.get('/test', (request, response)=>{                         //3
@@ -35,4 +37,6 @@ sequelize.sync()
  *      Aqui por ejemplo cuando escuche el listen llama al console.log
  * 
  * 3.   Hacer esto es una mala practica ya que rompe con el modelo MVC, en el index no se deberian de hacer llamadas a la base de datos
+ * 
+ * 4.   Rutas de persona
  */
