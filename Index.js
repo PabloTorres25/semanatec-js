@@ -2,12 +2,14 @@
 const express = require("express");
 const app = express();
 const personaRoutes = require('./routes/persona')               //4
+const proyectoRoutes = require('./routes/proyecto')
 // Trae el objeto de conexión
 const sequelize = require('./util/database')
 
 //middleware                                                    //1
 app.use(express.json());
 app.use('/persona', personaRoutes);
+app.use('/proyecto', proyectoRoutes);
 
 // Mala practica
 app.get('/test', (request, response)=>{                         //3
