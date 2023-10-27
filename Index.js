@@ -18,7 +18,7 @@ app.get('/test', (request, response)=>{                         //3
 })
 
 // Levantar el server y escuchar peticiones
-sequelize.sync()
+sequelize.sync(/*{force:true}*/)                                    //5
 .then(result =>{
     app.listen(8080, ()=>{                                      //2
         console.log("Servidor escuchando")
@@ -41,4 +41,8 @@ sequelize.sync()
  * 3.   Hacer esto es una mala practica ya que rompe con el modelo MVC, en el index no se deberian de hacer llamadas a la base de datos
  * 
  * 4.   Rutas de persona
+ * 
+ * 5.   Adentro de el parentesis podemos poner "{force:true}" CUIDADO PORQUE BORRA TODO
+ *      Pero asi elimina todo lo que hay en la base de datos y encambio lo sobreescribe con la forma que quiera tener desde la base de datos
+ *      Recomendado: Hacer un Mysql dum (o algo asi), para tener un respando de la base de datos antes de borrarla
  */
